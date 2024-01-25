@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lwa_fastapi_middleware_bedrock_agent"
+version = "0.0.1"
+authors = [
+  { name="moritalous", email="moritalous@gmail.com" },
+]
+description = "FastAPI Middleware for Agents for Amazon Bedrock. Use with AWS Lambda Web Adapter."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/moritalous/lwa-fastapi-middleware-bedrock-agent"
+Issues = "https://github.com/moritalous/lwa-fastapi-middleware-bedrock-agent/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
