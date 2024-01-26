@@ -36,7 +36,7 @@ app.add_middleware(BedrockAgentMiddleware, pass_through_path="/pass_through_path
 
 ## Example
 
-(work in progress)
+Examples are located in the [example](./example/) directory
 
 ## License
 
