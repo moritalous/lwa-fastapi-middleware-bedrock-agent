@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "lwa_fastapi_middleware_bedrock_agent"
-version = "0.0.3"
+version = "0.0.4"
 authors = [
   { name="moritalous", email="moritalous@gmail.com" },
 ]
