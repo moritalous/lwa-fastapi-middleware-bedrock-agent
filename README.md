@@ -13,7 +13,7 @@ By using this middleware, you can create Lambda as a FastAPI. OpenAPI schemas ca
 ## How to install
 
 ```shell
-pip install lwa_fastapi_middleware_bedrock_agent
+pip install lwa-fastapi-middleware-bedrock-agent
 ```
 
 ## How to use
