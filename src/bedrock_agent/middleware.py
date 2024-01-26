@@ -11,7 +11,7 @@ from starlette.types import ASGIApp
 logger = logging.getLogger("bedrockagent-middleware")
 logger.propagate = False
 
-formatter = logging.Formatter("[%(levelname)s] %(message)s")
+formatter = logging.Formatter("%(levelname)s:     %(message)s")
 handler = logging.StreamHandler()
 handler.setFormatter(formatter)
 
@@ -26,6 +26,8 @@ class BedrockAgentMiddleware(BaseHTTPMiddleware):
         dispatch: typing.Optional[DispatchFunction] = None,
         pass_through_path="/events",
     ):
+        logger.info("pass_through_path: %s", pass_through_path)
+
         self.app = app
         self._pass_through_path = pass_through_path
         self.dispatch_func = self.dispatch if dispatch is None else dispatch
@@ -128,7 +130,7 @@ class BedrockAgentMiddleware(BaseHTTPMiddleware):
                 }
             )
 
-            logger.debug("Response: %s", response.json())
+            logger.debug("Response: %s", response)
             return response
 
         except Exception as e:
